@@ -5,5 +5,5 @@ import android.view.View
 
 internal object Views {
 
-    inline fun View.layout(rect: Rect) = layout(rect.left, rect.top, rect.right, rect.bottom)
+    fun View.layout(rect: Rect) = layout(rect.left, rect.top, rect.right, rect.bottom)
 }

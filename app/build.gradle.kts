@@ -32,7 +32,7 @@ android {
 
 dependencies {
 
-    api(project(":android-shadow-layout"))
+    api("io.github.hellogoogle2000:android-shadow-layout:1.0.0")
 
     // AndroidX
     api("androidx.appcompat:appcompat:1.7.0")
