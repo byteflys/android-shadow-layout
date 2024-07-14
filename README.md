@@ -1,26 +1,23 @@
 # About this Project
 
-An android auto-adaptive layout library
+An android layout that support all kinds of shadows
 
 # Core Ability
 
-Auto wrap line when item reach parent end
-
-# Attributes
-
-- itemMarginX, padding between each column
-- itemMarginY, padding between each row
-- item margins will be ignored, you can use padding or wrapper view instead
+- support shadow color, blur radius, location offset
+- support shadow inner stroke border
+- support shadow corners
+- support shadow inner fill color
 
 # Steps for Integration
 
 #### 1. Dependency
 
 ```kotlin
-api("io.github.hellogoogle2000:android-flowlayout:1.0.3")
+api("io.github.hellogoogle2000:android-shadow-layout:1.0.0")
 ```
 
-#### 2. Apply in Xml Layout
+#### 2. Apply in Xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -32,78 +29,33 @@ api("io.github.hellogoogle2000:android-flowlayout:1.0.3")
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.android.library.flowlayout.FlowLayout
+    <com.android.library.shadowlayout.ShadowLayout
         android:id="@+id/flowLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="20dp"
-        app:itemMarginX="10dp"
-        app:itemMarginY="5dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showShadow="true">
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:background="#22FF0000"
-            android:gravity="center"
-            android:text="1"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:background="#22FF0000"
-            android:gravity="center"
-            android:text="2"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
+        <View
             android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:background="#22FF0000"
-            android:gravity="center"
-            android:text="3"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="190dp"
-            android:layout_height="30dp"
-            android:background="#22FF0000"
-            android:gravity="center"
-            android:text="4"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:background="#22FF0000"
-            android:gravity="center"
-            android:text="5"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-    </com.android.library.flowlayout.FlowLayout>
+            android:layout_height="200dp" />
+    </com.android.library.shadowlayout.ShadowLayout>
 </LinearLayout>
 ```
 
-#### 3. Convert View from Data
+#### 3. Supported Attributes
 
-you are also enabled to create view from a data set dynamically
+- showShadow, Boolean
+- showBorder, Boolean
+- shadowRadius, Dimen
+- shadowColor, Color
+- shadowDx, Dimen
+- shadowDy, Dimen
+- cornerRadius, Dimen
+- topLeftRadius topRightRadius bottomLeftRadius bottomRightRadius
+- borderColor, Color
+- borderWidth, Dimen
+- fillColor, Color
 
-```kotlin
-val simulated = mutableListOf<String>().apply {
-    for (i in 0 until 30)
-        add(UUID.randomUUID().toString())
-}
-binding.flowLayout.applyViewAdapter({ Button(this) }, simulated) { view, data ->
-    view.text = data
-    view.setPadding(15, 15, 15, 15)
-    val lp = view.layoutParams
-    lp.width = ViewGroup.LayoutParams.WRAP_CONTENT
-    lp.height = ViewGroup.LayoutParams.WRAP_CONTENT
-}
 ```
 # Preview
 

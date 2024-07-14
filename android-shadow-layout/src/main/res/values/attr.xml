@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="itemMarginX" format="dimension|reference" />
-    <attr name="itemMarginY" format="dimension|reference" />
-    <declare-styleable name="FlowLayout">
-        <attr name="itemMarginX" />
-        <attr name="itemMarginY" />
+    <attr name="showShadow" format="boolean" />
+    <attr name="showBorder" format="boolean" />
+    <attr name="shadowColor" format="color|reference" />
+    <attr name="shadowDx" format="dimension|reference" />
+    <attr name="shadowDy" format="dimension|reference" />
+    <attr name="shadowRadius" format="dimension|reference" />
+    <attr name="cornerRadius" format="dimension|reference" />
+    <attr name="topLeftRadius" format="dimension|reference" />
+    <attr name="topRightRadius" format="dimension|reference" />
+    <attr name="bottomRightRadius" format="dimension|reference" />
+    <attr name="bottomLeftRadius" format="dimension|reference" />
+    <attr name="borderColor" format="color|reference" />
+    <attr name="borderWidth" format="dimension|reference" />
+    <attr name="fillColor" format="color|reference" />
+    <declare-styleable name="ShadowLayout">
+        <attr name="showShadow" />
+        <attr name="showBorder" />
+        <attr name="shadowColor" />
+        <attr name="shadowDx" />
+        <attr name="shadowDy" />
+        <attr name="shadowRadius" />
+        <attr name="cornerRadius" />
+        <attr name="topLeftRadius" />
+        <attr name="topRightRadius" />
+        <attr name="bottomRightRadius" />
+        <attr name="bottomLeftRadius" />
+        <attr name="borderColor" />
+        <attr name="borderWidth" />
+        <attr name="fillColor" />
     </declare-styleable>
 </resources>

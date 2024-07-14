@@ -1,4 +1,4 @@
-package com.android.library.flowlayout.commons.kotlin
+package com.android.library.shadowlayout.commons.kotlin
 
 internal object Maths {
 
