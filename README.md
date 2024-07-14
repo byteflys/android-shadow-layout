@@ -56,7 +56,7 @@ api("io.github.hellogoogle2000:android-shadow-layout:1.0.0")
 - borderWidth, Dimen
 - fillColor, Color
 
-# 4. Preview
+# Preview
 
 <img src="https://github.com/user-attachments/assets/21343e5d-8f8f-43ef-b9f8-1782b56d8802" height="250"><br>
 <img src="https://github.com/user-attachments/assets/5e4de4a1-74e8-4ccd-bc99-01d3002718a9" height="250"><br>
